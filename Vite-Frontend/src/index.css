@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+:root {
+  --cl-white: #fff;
+  --cl-purple: #7c3aed;
+  --light-pur: #8d37e2;
+  --dark-pur: #6e1bb0;
+}
+body {
+  background-color: var(--cl-purple);
+}
+button {
+  cursor: pointer;
+}

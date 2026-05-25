@@ -1,10 +1,11 @@
 import React from 'react';
+import Home from './Modules/Home';
 
 const App = () => {
   return (
-    <div>
-      <h1>APP</h1>
-    </div>
+    <>
+      <Home />
+    </>
   );
 };
 
