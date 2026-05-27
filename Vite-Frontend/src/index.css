@@ -2,13 +2,34 @@
 
 :root {
   --cl-white: #fff;
+  --white: #f3e6ff;
   --cl-purple: #7c3aed;
   --light-pur: #8d37e2;
   --dark-pur: #6e1bb0;
+  --dark: #0f172a;
+  --gray: #64748b;
+  --light-gray: #f8fafc;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  --border: #e2e8f0;
+  --accent: #d946ef;
+  --gradient-text: linear-gradient(to right, #8d37e2, #d946ef);
 }
 body {
-  background-color: var(--cl-purple);
+  /* background-color: var(--cl-purple); */
+  overflow-x: hidden;
 }
 button {
   cursor: pointer;
+}
+.blinker {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
