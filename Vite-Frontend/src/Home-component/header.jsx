@@ -48,25 +48,26 @@ const Header = () => {
   ]);
 
   // const user = ['0xCE019A', '0x37C773', ' 0xCBE890', ' 0x55323C'];
+
   return (
     <>
-      <header className='min-h-screen bg-white pt-20 lg:pt-24 pb-16 px-4 md:px-16'>
+      <header className='min-h-[100vh] bg-white pt-40 pb-16 px-4 md:px-16'>
         <section
-          className={`lg:flex justify-between gap-8  transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-1000 ease-in ${isVisible ? '' : ''}`}
           ref={ref}
         >
           <div className='max-w-150 mx-auto'>
             <a
               href='#'
-              className='py-3 px-3 h-16 md:h-12 md:w-120 border-green-500/20 hover:border-green-500/50 border rounded-full flex justify-between items-center text-xl bg-[var(--cl-white)] gap-2 hover:-translate-y-1 transition-transform duration-300 shadow-[0_8px_20px_rgba(37,211,102,0.1)]  hover:shadow-[0_8px_20px_rgba(37,211,102,0.2)] mx-auto lg:mx-0'
+              className='py-3 px-3 h-16 md:h-12 md:w-110 border-green-500/20 hover:border-green-500/50 border rounded-full flex justify-between items-center text-xl bg-[var(--cl-white)] gap-2 hover:-translate-y-1 transition-transform duration-300 shadow-[0_8px_20px_rgba(37,211,102,0.1)]  hover:shadow-[0_8px_20px_rgba(37,211,102,0.2)] mx-auto lg:mx-0'
             >
               <span className='w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center'>
                 <i className='fa-brands fa-whatsapp text-white'></i>
               </span>
-              <span className='text-[var(--dark)] text-center text-[1.1rem] md:text-[1.25rem] font-medium'>
+              <span className='text-[var(--dark)] text-center text-[1rem] md:text-[1.1rem] font-medium'>
                 Join our Whatsapp for news and updates
               </span>
-              <i className='fa-solid fa-arrow-right text-[#25D366] text-[0.8rem] md:text-xl'></i>
+              <i className='fa-solid fa-arrow-right text-[#25D366] text-[0.8rem] md:text-[0.9rem]'></i>
             </a>
 
             <h1 className='pt-6 text-[var(--dark)] text-[2.5rem]/12 font-bold md:text-6xl text-center lg:text-left'>
@@ -93,7 +94,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-          <div className='mt-8 lg:mt-0 pt-8 lg:pt-32 shadow-[var(--shadow-md)] w-80 md:w-100 lg:w-120 mx-auto rounded-2xl lg:shadow-none'>
+          <div className='mt-8 lg:mt-0 pt-8 lg:pt-32 shadow-[var(--shadow-md)] w-80 md:w-100 xl:w-140 mx-auto rounded-2xl lg:shadow-none'>
             <div className='w-80 md:w-120 lg:w-120'>
               <img
                 src='/images/heroImg.png'
@@ -104,7 +105,7 @@ const Header = () => {
           </div>
         </section>
         <div
-          className={`md:flex gap-4 w-fit mx-auto lg:mx-0 transition-all duration-1000 ease-out ${isBadgesVisible ? 'translate-y-4' : 'translate-y-20'}`}
+          className={`md:flex gap-4 w-fit mx-auto lg:mx-0 transition-all duration-1000 ease-out ${isBadgesVisible ? 'translate-y-4 opacity-100' : 'translate-y-20 opacity-0'}`}
           ref={badgesRef}
         >
           <p className='bg-white p-3 rounded-full border-2 font-medium border-[var(--border)] shadow-[var(--shadow-sm)] max-w-50'>
@@ -117,7 +118,7 @@ const Header = () => {
           </p>
         </div>
       </header>
-      <section className='bg-[var(--dark)] py-4 lg:flex justify-between items-center gap-2 px-8 xl:px-16'>
+      <section className='bg-[var(--dark)] py-4 lg:flex justify-between items-center gap-2 px-4 xl:px-16'>
         <div className='border-b-[0.02rem] lg:border-b-0 lg:border-r border-[var(--gray)] lg:min-w-90 xl:min-w-110 text-center md:text-left pb-3 lg:pb-0'>
           <p className='uppercase text-[var(--gray)] font-medium text-[0.9rem] text-center md:text-left'>
             <GoDotFill className='inline-block text-green-500 animate-pulse transition-all duration-300 mr-1' />
