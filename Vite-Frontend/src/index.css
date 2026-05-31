@@ -11,9 +11,13 @@
   --light-gray: #f8fafc;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  --shadow-3d:
+    2px 2px 0px rgba(0, 0, 0, 0.1), 4px 4px 0px rgba(0, 0, 0, 0.08),
+    6px 6px 0px rgba(0, 0, 0, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.15);
   --border: #e2e8f0;
   --accent: #d946ef;
   --gradient-text: linear-gradient(to right, #8d37e2, #d946ef);
+  --icons: #cbd5e1;
 }
 body {
   /* background-color: var(--cl-purple); */
@@ -22,7 +26,8 @@ body {
 button {
   cursor: pointer;
 }
-.blinker {
+
+/* .blinker {
   animation: blink 1s infinite;
 }
 @keyframes blink {
@@ -31,5 +36,20 @@ button {
   }
   100% {
     opacity: 1;
+  }
+} */
+
+/* 
+  Animation
+*/
+.animate-marquee {
+  animation: marquee 8s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
   }
 }
