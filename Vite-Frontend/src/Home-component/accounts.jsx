@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ScrollintoView from '../Functions';
 import Icons from '../utils/Data';
+import AccountsCard from './accountsCard';
+import { cardsData } from '../utils/Data';
 
 const Accounts = () => {
   const [ref, setAnimation] = ScrollintoView();
@@ -43,7 +45,11 @@ const Accounts = () => {
             </p>
           </div>
           <div className='pt-8 md:pt-12 w-full md:flex md:flex-wrap md:justify-evenly lg:justify-start items-center gap-4'>
-            <div
+            {/* CARDS */}
+            {cardsData.map((item, index) => {
+              return <AccountsCard key={index} {...item} />;
+            })}
+            {/* <div
               className='md:w-80 lg:w-72 md:h-95 mx-4 md:mx-0 mb-8  bg-[var(--cl-white)] border rounded-3xl border-[var(--border)] transition-all duration-500 hover:shadow-md hover:shadow-[var(--shadow-md)] hover:border-[var(--dark-pur)] px-4 py-8'
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
@@ -766,7 +772,8 @@ const Accounts = () => {
                   ></i>
                 </p>
               </div>
-            </div>
+            </div> */}
+            {/*END OF CARDS */}
           </div>
         </section>
         {/* ICONS */}
@@ -779,7 +786,7 @@ const Accounts = () => {
                   key={index}
                 >
                   <i
-                    className={`${item.icon} text-[2.35rem] text-[var(--icons)] hover:text-[var(--dark)] `}
+                    className={`${item.icon} text-[2.35rem] text-[var(--icons)] hover:text-[var(--dark)]`}
                   ></i>
                 </span>
               );
