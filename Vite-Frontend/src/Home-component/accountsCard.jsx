@@ -13,12 +13,12 @@ const AccountsCard = ({ bg, cl, linear, icon, title, description, status }) => {
         onMouseLeave={() => setHovered(false)}
       >
         <div
-          className={`h-15 w-15 rounded-xl bg-[${bg}] flex justify-center items-center mb-2`}
+          className={`h-15 w-15 rounded-xl flex justify-center items-center mb-2`}
           style={{
             boxShadow: hovered
               ? '0px 20px 40px transparent'
               : 'var(--shadow-3d)',
-            background: `${linear}`,
+            background: linear || bg,
             transform: hovered
               ? 'perspective(500px) rotateX(0deg) rotateY(0deg) translateZ(40px) scale(1)'
               : 'perspective(500px) rotateX(20deg) rotateY(-20deg) translateZ(0px) scale(0.9)',

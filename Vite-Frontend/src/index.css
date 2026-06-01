@@ -18,6 +18,7 @@
   --accent: #d946ef;
   --gradient-text: linear-gradient(to right, #8d37e2, #d946ef);
   --icons: #cbd5e1;
+  --font-main: 'Poppins', sans-serif;
 }
 body {
   /* background-color: var(--cl-purple); */
@@ -52,4 +53,14 @@ button {
   100% {
     transform: translateX(-40%);
   }
+}
+
+/* Setup Card */
+.setup-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.setup-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--light-pur);
 }

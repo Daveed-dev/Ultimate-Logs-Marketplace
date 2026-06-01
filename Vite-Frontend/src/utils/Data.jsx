@@ -223,3 +223,41 @@ export const cardsData = [
     status: 'In Stock',
   },
 ];
+
+export const marketCardData = [
+  {
+    title: 'Automated Delivery',
+    description:
+      'Your purchased login credentials are automatically delivered to your screen and email the second your payment clears.',
+    icon: 'fa-solid fa-microchip',
+  },
+  {
+    title: 'Verified Logins',
+    description: `Verified Logins
+    Our proprietary backend verifies every username and password in real-time before delivery, ensuring zero dead stock.`,
+    icon: 'fa-solid fa-shield-alt',
+  },
+  {
+    title: 'Secure Payments',
+    description: `Fund your wallet via Crypto, Cards, or Escrow. Our secure checkout protects your balance unconditionally.`,
+    icon: 'fa-solid fa-lock',
+  },
+];
+
+export const setupCardData = [
+  {
+    title: '1. Select Account',
+    description: `Choose the VPN, Digital Accounts, or Email login you need from our marketplace.`,
+    icon: 'fa-solid fa-layer-group',
+  },
+  {
+    title: '2. Checkout',
+    description: `Pay securely using our encrypted gateway. We accept multiple payment methods.`,
+    icon: 'fa-solid fa-cart-shopping',
+  },
+  {
+    title: '3. Receive Logins',
+    description: `Instantly download your username, password, and recovery info in text or CSV format.`,
+    icon: 'fa-solid fa-download',
+  },
+];
