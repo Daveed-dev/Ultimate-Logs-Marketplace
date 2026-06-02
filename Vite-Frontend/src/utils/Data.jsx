@@ -261,3 +261,21 @@ export const setupCardData = [
     icon: 'fa-solid fa-download',
   },
 ];
+
+export const footerIcons = [
+  {
+    icon: 'fa-brands fa-facebook',
+  },
+  {
+    icon: 'fa-brands fa-x-twitter',
+  },
+  {
+    icon: 'fa-brands fa-instagram',
+  },
+  {
+    icon: 'fa-brands fa-telegram',
+  },
+  {
+    icon: 'fa-brands fa-tiktok',
+  },
+];

@@ -7,6 +7,7 @@ import SetupCard from './setupCard';
 const Market = () => {
   const [ref, setAnimation] = ScrollintoView();
   const [ref2, setAnimation2] = ScrollintoView();
+  const [ref3, setAnimation3] = ScrollintoView();
   return (
     <>
       <section className='pt-12 md:pt-20 bg-[var(--cl-white)]'>
@@ -49,22 +50,27 @@ const Market = () => {
             </div>
           </div>
         </article>
-        <article>
-          <div className='mx-4 my-12 md:mx-16 md:my-20 lg:mx-24 p-8 lg:p-16  bg-[var(--light-pur)] rounded-2xl'>
-            <h1 className='text-4xl lg:text-5xl font-bold text-center text-white pt-8 pb-2'>
-              Ready To Purchase Premium Logs?
-            </h1>
-            <p className='text-center text-white lg:text-[1.3rem] text-xl text-center  mx-auto pt-2 md:pt-4'>
-              Stop dealing with bans and unreliable vendors. Buy verified
-              credentials from Ultimate Logs Marketplace and scale instantly.
-            </p>
-            <div className='flex flex-wrap justify-center gap-4 py-6'>
-              <button className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '>
-                Register Free Account
-              </button>
-              <button className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem]'>
-                Browse All Logins
-              </button>
+        <article className='bg-[var(--white)] w-full'>
+          <div className='px-4 py-12 md:px-16 md:py-20 lg:px-24'>
+            <div
+              className={`p-8 lg:px-16 lg:py-8  bg-[var(--light-pur)] transition-all duration-400 rounded-2xl ${setAnimation3 ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+              ref={ref3}
+            >
+              <h1 className='text-4xl lg:text-5xl font-bold text-center text-white pt-8 pb-2'>
+                Ready To Purchase Premium Logs?
+              </h1>
+              <p className='text-center text-white lg:text-[1.3rem] text-xl text-center  mx-auto pt-2 md:pt-4'>
+                Stop dealing with bans and unreliable vendors. Buy verified
+                credentials from Ultimate Logs Marketplace and scale instantly.
+              </p>
+              <div className='flex flex-wrap justify-center gap-4 py-6'>
+                <button className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '>
+                  Register Free Account
+                </button>
+                <button className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem]'>
+                  Browse All Logins
+                </button>
+              </div>
             </div>
           </div>
         </article>
