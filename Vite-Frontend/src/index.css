@@ -21,15 +21,15 @@
   --font-main: 'Poppins', sans-serif;
 }
 body {
-  /* background-color: var(--cl-purple); */
   overflow-x: hidden;
 }
 button {
   cursor: pointer;
 }
 
-/* .blinker {
-  animation: blink 1s infinite;
+/* Blinking Animation */
+.blinker {
+  animation: blink 0.8s infinite;
 }
 @keyframes blink {
   0% {
@@ -38,7 +38,7 @@ button {
   100% {
     opacity: 1;
   }
-} */
+}
 
 /* 
   Animation
@@ -63,4 +63,22 @@ button {
 .setup-card:hover {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--light-pur);
+}
+
+/* Wave Animation */
+.wave-bg {
+  background: linear-gradient(270deg, #ffffff, #f3e6ff, #e0ccff, #ffffff);
+  background-size: 400% 400%;
+  animation: seaWave 10s ease infinite;
+}
+@keyframes seaWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

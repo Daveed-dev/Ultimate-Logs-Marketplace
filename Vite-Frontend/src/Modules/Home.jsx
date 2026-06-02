@@ -6,6 +6,9 @@ import Market from '../Home-component/market';
 import Footer from '../Home-component/footer';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Ultimate Tools Marketplace - Home';
+  }, []);
   return (
     <>
       <Navbar />

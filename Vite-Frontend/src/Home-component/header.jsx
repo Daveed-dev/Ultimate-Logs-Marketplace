@@ -46,31 +46,50 @@ const Header = () => {
     'VTU & Bills Payment',
     'Digital Accounts',
   ]);
+  const color = ['#fff', '#f3e6ff'];
+  const [current, setCurrent] = useState(0);
+  const [animate, setAnimate] = useState(false);
 
-  // const user = ['0xCE019A', '0x37C773', ' 0xCBE890', ' 0x55323C'];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimate(true);
+
+      setTimeout(() => {
+        setCurrent((prev) => (prev === 0 ? 1 : 0));
+        setAnimate(false);
+      }, 1000);
+    }, 20000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-      <header className='min-h-[100vh] bg-white pt-40 pb-16 px-4 md:px-16'>
+      <header
+        style={{
+          backgroundColor: color[current],
+        }}
+        className={`wave-bg min-h-[100vh] pt-36 pb-16 px-4 md:px-16 `}
+      >
         <section
-          className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-1000 ease-in ${isVisible ? '' : ''}`}
+          className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-400 ease-in ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
           ref={ref}
         >
-          <div className='max-w-150 mx-auto'>
+          <div className='max-w-130 mx-auto lg:mx-0'>
             <a
               href='#'
-              className='py-3 px-3 h-16 md:h-12 md:w-110 border-green-500/20 hover:border-green-500/50 border rounded-full flex justify-between items-center text-xl bg-[var(--cl-white)] gap-2 hover:-translate-y-1 transition-transform duration-300 shadow-[0_8px_20px_rgba(37,211,102,0.1)]  hover:shadow-[0_8px_20px_rgba(37,211,102,0.2)] mx-auto lg:mx-0'
+              className='py-3 px-3 h-16 md:h-12 max-w-104 border-green-500/20 hover:border-green-500/50 border rounded-full flex justify-between items-center text-xl bg-[var(--cl-white)] gap-2 hover:-translate-y-1 transition-transform duration-300 shadow-[0_8px_20px_rgba(37,211,102,0.1)]  hover:shadow-[0_8px_20px_rgba(37,211,102,0.2)] mx-auto lg:mx-0'
             >
               <span className='w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center'>
                 <i className='fa-brands fa-whatsapp text-white'></i>
               </span>
-              <span className='text-[var(--dark)] text-center text-[1rem] md:text-[1.1rem] font-medium'>
+              <span className='text-[var(--dark)] font-medium text-center text-[0.9rem] md:text-[1.05rem]'>
                 Join our Whatsapp for news and updates
               </span>
               <i className='fa-solid fa-arrow-right text-[#25D366] text-[0.8rem] md:text-[0.9rem]'></i>
             </a>
 
-            <h1 className='pt-6 text-[var(--dark)] text-[2.5rem]/12 font-bold md:text-6xl text-center lg:text-left'>
+            <h1 className='pt-4 text-[var(--dark)] text-[2.5rem]/12 font-bold md:text-6xl text-center lg:text-left'>
               Digital Solution to Early Markets
             </h1>
             <div className='flex items-center justify-center lg:justify-start'>
@@ -80,12 +99,12 @@ const Header = () => {
               </h1>
             </div>
 
-            <p className='text-[var(--gray)] text-xl mt-6 text-center lg:text-left'>
+            <p className='text-[var(--gray)] text-lg mt-4 text-center lg:text-left'>
               Ultimate Logs Marketplace: Discover, Verify, and Elevate Your
               Online Presence. Your trusted gateway to verified digital accounts
               and services, empowering your digital journey.
             </p>
-            <div className='pt-6 flex gap-6 md:gap-5 justify-center lg:justify-start'>
+            <div className='pt-4 flex gap-6 md:gap-5 justify-center lg:justify-start'>
               <button className='text-white py-4 px-7 bg-gradient-to-br from-[var(--light-pur)] to-[var(--dark-pur)] rounded-xl hover:-translate-y-1 shadow-[0px_8px_20px_rgba(141,55,226,0.2)] hover:shadow-[0px_8px_20px_rgba(141,55,226,0.4)]'>
                 Browse Accounts <i className='fa-solid fa-arrow-right '></i>
               </button>
@@ -99,13 +118,13 @@ const Header = () => {
               <img
                 src='/images/heroImg.png'
                 alt='heroimg'
-                className='w-80 md:w-100 lg:w-120'
+                className='w-80 md:w-100 lg:w-120 lg:rotate-2 lg:drop-shadow-[0_0_40px_rgba(141,55,226,0.3)] hover:rotate-0 transition-transform duration-300'
               />
             </div>
           </div>
         </section>
         <div
-          className={`md:flex gap-4 w-fit mx-auto lg:mx-0 transition-all duration-1000 ease-out ${isBadgesVisible ? 'translate-y-4 opacity-100' : 'translate-y-20 opacity-0'}`}
+          className={`md:flex gap-4 w-fit mx-auto lg:mx-0 transition-all duration-400 ease-out ${isBadgesVisible ? 'translate-y-4 opacity-100' : 'translate-y-20 opacity-0'}`}
           ref={badgesRef}
         >
           <p className='bg-white p-3 rounded-full border-2 font-medium border-[var(--border)] shadow-[var(--shadow-sm)] max-w-50'>
