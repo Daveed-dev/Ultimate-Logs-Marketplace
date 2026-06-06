@@ -3,6 +3,7 @@
 :root {
   --cl-white: #fff;
   --white: #f3e6ff;
+  --bg-body: #f1f0fb;
   --cl-purple: #7c3aed;
   --light-pur: #8d37e2;
   --dark-pur: #6e1bb0;
@@ -81,4 +82,51 @@ button {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* FLOAT ANIMATION */
+
+.animatefloat {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes floatUp {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatDown {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.animatefloatup {
+  animation: floatUp 5s ease-in-out infinite;
+}
+
+.animatefloatdown {
+  animation: floatDown 6s ease-in-out infinite;
 }

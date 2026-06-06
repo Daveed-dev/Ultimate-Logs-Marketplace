@@ -1,10 +1,11 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const Auth = () => {
   return (
     <>
       <section>
-        <h1>AUTH FOLDER</h1>
+        <Outlet />
       </section>
     </>
   );
