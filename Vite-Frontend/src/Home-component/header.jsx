@@ -46,31 +46,10 @@ const Header = () => {
     'VTU & Bills Payment',
     'Digital Accounts',
   ]);
-  const color = ['#fff', '#f3e6ff'];
-  const [current, setCurrent] = useState(0);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimate(true);
-
-      setTimeout(() => {
-        setCurrent((prev) => (prev === 0 ? 1 : 0));
-        setAnimate(false);
-      }, 1000);
-    }, 20000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
-      <header
-        style={{
-          backgroundColor: color[current],
-        }}
-        className={`wave-bg min-h-[100vh] pt-36 pb-16 px-4 md:px-16 `}
-      >
+      <header className={`wave-bg min-h-[100vh] pt-36 pb-16 px-4 md:px-16 `}>
         <section
           className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-400 ease-in ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
           ref={ref}
@@ -118,7 +97,7 @@ const Header = () => {
               <img
                 src='/images/heroImg.png'
                 alt='heroimg'
-                className='w-80 md:w-100 lg:w-120 lg:rotate-2 lg:drop-shadow-[0_0_40px_rgba(141,55,226,0.3)] hover:rotate-0 transition-transform duration-300'
+                className='w-80 md:w-100 lg:w-120 lg:rotate-2 lg:drop-shadow-[0_0_40px_rgba(141,55,226,0.3)] hover:rotate-0 transition-transform duration-500'
               />
             </div>
           </div>

@@ -68,13 +68,13 @@ button {
 
 /* Wave Animation */
 .wave-bg {
-  background: linear-gradient(270deg, #ffffff, #f3e6ff, #e0ccff, #ffffff);
+  background: linear-gradient(270deg, #ffffff, #ffffff, #e0ccff, #f3e6ff);
   background-size: 400% 400%;
-  animation: seaWave 10s ease infinite;
+  animation: seaWave 15s ease infinite;
 }
 @keyframes seaWave {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
     background-position: 100% 50%;

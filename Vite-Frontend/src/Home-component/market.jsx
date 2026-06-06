@@ -50,8 +50,8 @@ const Market = () => {
             </div>
           </div>
         </article>
-        <article className='bg-[var(--white)] w-full'>
-          <div className='px-4 py-12 md:px-16 md:py-20 lg:px-24'>
+        <article className='bg-[var(--bg-body)] w-full'>
+          <div className='px-4 py-12 md:px-16 md:py-24 lg:px-24'>
             <div
               className={`p-8 lg:px-16 lg:py-8  bg-[var(--light-pur)] transition-all duration-400 rounded-2xl ${setAnimation3 ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
               ref={ref3}
@@ -59,15 +59,15 @@ const Market = () => {
               <h1 className='text-4xl lg:text-5xl font-bold text-center text-white pt-8 pb-2'>
                 Ready To Purchase Premium Logs?
               </h1>
-              <p className='text-center text-white lg:text-[1.3rem] text-xl text-center  mx-auto pt-2 md:pt-4'>
+              <p className='text-center text-white lg:text-[1.3rem] text-xl text-center max-w-210  mx-auto pt-2 md:pt-4'>
                 Stop dealing with bans and unreliable vendors. Buy verified
                 credentials from Ultimate Logs Marketplace and scale instantly.
               </p>
               <div className='flex flex-wrap justify-center gap-4 py-6'>
-                <button className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '>
+                <button className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] md:text-[1rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '>
                   Register Free Account
                 </button>
-                <button className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem]'>
+                <button className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem] md:text-[1rem]'>
                   Browse All Logins
                 </button>
               </div>

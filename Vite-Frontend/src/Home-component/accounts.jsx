@@ -26,7 +26,7 @@ const Accounts = () => {
               profiles, enterprise tools, and premium VPN networks.
             </p>
           </div>
-          <div className='pt-8 md:pt-12 w-full md:flex md:flex-wrap md:justify-evenly lg:justify-start items-center gap-4'>
+          <div className='pt-8 md:pt-12 w-full md:flex md:flex-wrap md:justify-evenly lg:justify-start items-center gap-4 xl:grid xl:grid-cols-4'>
             {/* CARDS */}
             {cardsData.map((item, index) => {
               return <AccountsCard key={index} {...item} />;

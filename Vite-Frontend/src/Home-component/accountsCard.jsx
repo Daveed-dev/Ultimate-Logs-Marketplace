@@ -7,7 +7,7 @@ const AccountsCard = ({ bg, cl, linear, icon, title, description, status }) => {
   return (
     <>
       <div
-        className={`md:w-80 lg:w-65 md:h-82 mx-4 md:mx-0 mb-8  bg-[var(--cl-white)] border rounded-3xl border-[var(--border)] transition-all duration-500 hover:shadow-[var(--shadow-md)] hover:border-[var(--dark-pur)] px-4 py-8 ${setAnimation ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+        className={`md:w-80 lg:w-70 md:h-82 mx-4 md:mx-0 mb-8  bg-[var(--cl-white)] border rounded-3xl border-[var(--border)] transition-all duration-500 hover:shadow-[var(--shadow-md)] hover:border-[var(--dark-pur)] px-4 py-8 ${setAnimation ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
         ref={ref}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
