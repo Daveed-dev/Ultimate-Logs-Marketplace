@@ -19,13 +19,13 @@ const Login = () => {
           <span className='absolute bottom-32 right-20 w-20 h-[1px] bg-[var(--light-pur)]/20 -rotate-45'></span>
           <span className='absolute top-1/2 left-5 w-16 h-[1px] bg-[var(--light-pur)]/15 rotate-12'></span>
         </div>
-        <article className='flex items-center md:h-124 md:w-200'>
+        <article className='flex items-center md:h-124 md:w-200 z-10 shadow-3xl shadow-[var(--shadow-md)] rounded-3xl'>
           <div className='bg-[var(--cl-white)] md:w-105 w-full h-full p-8 rounded-2xl md:rounded-l-3xl md:rounded-r-none'>
             <img src='/images/logo.png' alt='logo-img' className='h-9 my-2.5' />
             <h1 className='pt-4 font-bold text-[var(--dark)] text-2xl'>
               Welcome Back
             </h1>
-            <p className='text-[1rem]  text-[var(--gray)]'>
+            <p className='text-[0.9rem]  text-[var(--gray)]'>
               Enter your credentials to access your dashboard.
             </p>
             {/* FORM */}
@@ -36,13 +36,13 @@ const Login = () => {
                   USERNAME OR EMAIL
                 </label>
                 <div className='relative flex items-center group'>
-                  <i className='fa-regular fa-envelope absolute left-4 text-[var(--gray)] group-focus-within:text-[var(--dark-pur)] transition-all duration-300 text-[0.9rem]'></i>
+                  <i className='fa-regular fa-envelope absolute left-4 text-[var(--gray)]/60 group-focus-within:text-[var(--dark-pur)] transition-all duration-300 text-[0.9rem]'></i>
 
                   <input
                     type='email'
                     placeholder='Enter your username or email'
                     className='w-full border-2 border-[#eef0f6] rounded-xl pl-12 pr-4 py-3 bg-[#E8ECF4] outline-none  focus:ring-2
-    focus:ring-[var(--dark-pur)] focus:ring-inset transition-all duration-300 placeholder:text-[var(--gray)] placeholder:font-medium placeholder:text-[0.95rem]'
+    focus:ring-[var(--dark-pur)] focus:ring-inset transition-all duration-300 placeholder:text-[var(--gray)]/60 placeholder:font-medium placeholder:text-[0.95rem]'
                   />
                 </div>
               </div>
@@ -52,16 +52,16 @@ const Login = () => {
                   PASSWORD
                 </label>
                 <div className='relative flex items-center group'>
-                  <i className='fa-solid fa-lock absolute left-4 text-[var(--gray)] group-focus-within:text-[var(--dark-pur)] transition-all duration-300 text-[0.9rem]'></i>
+                  <i className='fa-solid fa-lock absolute left-4 text-[var(--gray)]/60 group-focus-within:text-[var(--dark-pur)] transition-all duration-300 text-[0.9rem]'></i>
 
                   <input
                     type={showPassword ? 'text' : 'password'}
                     placeholder='Enter your password'
                     className='w-full border-2 border-[#eef0f6] rounded-xl pl-12 pr-4 py-3 bg-[#E8ECF4] outline-none  focus:ring-2
-    focus:ring-[var(--dark-pur)] focus:ring-inset transition-all duration-300 placeholder:text-[var(--gray)] placeholder:font-medium placeholder:text-[0.95rem]'
+    focus:ring-[var(--dark-pur)] focus:ring-inset transition-all duration-300 placeholder:text-[var(--gray)]/60 placeholder:font-medium placeholder:text-[0.95rem]'
                   />
                   <i
-                    className={`fa-solid ${showPassword ? 'fa-eye-slash' : 'fa-eye'} absolute right-4 text-[var(--gray)] group-focus-within:text-[var(--dark-pur)] cursor-pointer top-1/2 -translate-y-1/2 transition-all duration-300 text-[0.9rem]`}
+                    className={`fa-solid ${showPassword ? 'fa-eye-slash' : 'fa-eye'} absolute right-4 text-[var(--gray)]/60 group-focus-within:text-[var(--dark-pur)] cursor-pointer top-1/2 -translate-y-1/2 transition-all duration-300 text-[0.9rem]`}
                     onClick={() => setShowPassword(!showPassword)}
                   ></i>
                 </div>
@@ -91,7 +91,7 @@ const Login = () => {
                 Do not have an account?
               </span>
               <Link
-                to='/user/signup'
+                to='/user/register'
                 className='text-[var(--dark-pur)] hover:text-[var(--accent)] transition-all duration-300 font-medium text-[0.95rem]'
               >
                 Sign Up

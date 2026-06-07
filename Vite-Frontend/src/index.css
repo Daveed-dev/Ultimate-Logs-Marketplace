@@ -19,6 +19,8 @@
   --accent: #d946ef;
   --gradient-text: linear-gradient(to right, #8d37e2, #d946ef);
   --icons: #cbd5e1;
+  --input-bg: #fafafe;
+  --placeholder: #b0b8c8;
   --font-main: 'Poppins', sans-serif;
 }
 body {
