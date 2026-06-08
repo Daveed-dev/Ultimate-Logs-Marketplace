@@ -19,8 +19,8 @@ const Login = () => {
           <span className='absolute bottom-32 right-20 w-20 h-[1px] bg-[var(--light-pur)]/20 -rotate-45'></span>
           <span className='absolute top-1/2 left-5 w-16 h-[1px] bg-[var(--light-pur)]/15 rotate-12'></span>
         </div>
-        <article className='flex items-center md:h-124 md:w-200 z-10 shadow-3xl shadow-[var(--shadow-md)] rounded-3xl'>
-          <div className='bg-[var(--cl-white)] md:w-105 w-full h-full p-8 rounded-2xl md:rounded-l-3xl md:rounded-r-none'>
+        <article className='flex items-center md:h-130 md:w-210 z-10 shadow-3xl shadow-[var(--shadow-md)] rounded-3xl'>
+          <div className='bg-[var(--cl-white)] md:w-110 w-full h-full p-8 rounded-2xl md:rounded-l-3xl md:rounded-r-none'>
             <img src='/images/logo.png' alt='logo-img' className='h-9 my-2.5' />
             <h1 className='pt-4 font-bold text-[var(--dark)] text-2xl'>
               Welcome Back
@@ -66,26 +66,28 @@ const Login = () => {
                   ></i>
                 </div>
               </div>
-            </form>
-            <div className='flex justify-between items-center py-3'>
-              <label className='flex items-center cursor-pointer text-[var(--gray)] hover:text-[var(--dark-pur)]'>
-                <input type='checkbox' name='remember' className='mr-1 ' />
-                <span className='text-[0.9rem] '>Remember Me</span>
-              </label>
-              <div>
-                <p className='text-[0.9rem] font-medium text-[var(--dark-pur)] hover:text-[var(--accent)] cursor-pointer transition-all duration-300'>
-                  Forgot Password?
-                </p>
+              <div className='flex justify-between items-center py-3'>
+                <label className='flex items-center cursor-pointer text-[var(--gray)] hover:text-[var(--dark-pur)]'>
+                  <input type='checkbox' name='remember' className='mr-1 ' />
+                  <span className='text-[0.9rem] '>Remember Me</span>
+                </label>
+                <div>
+                  <p className='text-[0.9rem] font-medium text-[var(--dark-pur)] hover:text-[var(--accent)] cursor-pointer transition-all duration-300'>
+                    Forgot Password?
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className='py-2'>
-              <button
-                type='submit'
-                className='text-white font-medium p-3 rounded-xl w-full bg-gradient-to-r from-[var(--light-pur)] to-[var(--accent)] flex justify-center items-center hover:-translate-y-1 hover:shadow-[0px_8px_20px_rgba(217,70,239,0.25)] transition-all duration-300 text-[1rem]'
-              >
-                Sign In <i className='fa-solid fa-arrow-right ml-2'></i>
-              </button>
-            </div>
+              <div className='py-2'>
+                <button
+                  type='submit'
+                  className='relative overflow-hidden text-white font-medium p-3 rounded-xl w-full bg-gradient-to-r from-[var(--light-pur)] to-[var(--accent)] flex justify-center items-center hover:-translate-y-1 hover:shadow-[0px_8px_20px_rgba(217,70,239,0.25)] transition-all duration-300 text-[1rem] group'
+                >
+                  {/* Shimmer sweep */}
+                  <span className='absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 pointer-events-none' />
+                  Sign In <i className='fa-solid fa-arrow-right ml-2'></i>
+                </button>
+              </div>
+            </form>
             <div className='flex justify-center py-2 gap-1'>
               <span className='text-[var(--gray)] font-medium text-[1rem]'>
                 Do not have an account?
