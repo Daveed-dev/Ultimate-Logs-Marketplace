@@ -38,7 +38,6 @@ function useTypingEffect(
 }
 
 const Header = () => {
-  const [ref, isVisible] = ScrollintoView();
   const [badgesRef, isBadgesVisible] = ScrollintoView();
   const word = useTypingEffect([
     'Email Rentals',
@@ -51,8 +50,7 @@ const Header = () => {
     <>
       <header className={`wave-bg min-h-[100vh] pt-36 pb-16 px-4 md:px-16 `}>
         <section
-          className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-400 ease-in ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-          ref={ref}
+          className={` lg:flex justify-between gap-8 xl:gap-30  transition-all duration-400 ease-in`}
         >
           <div className='max-w-130 mx-auto lg:mx-0'>
             <a
