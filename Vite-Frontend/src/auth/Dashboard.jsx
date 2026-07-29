@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     document.title = 'Ultimate Tools Marketplace - Dashboard';
@@ -17,7 +17,7 @@ const Dashboard = () => {
     transition-all duration-300 ease-in-out
     ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
     lg:translate-x-0
-    ${isSidebarOpen ? 'w-70' : 'w-70 lg:w-20'}
+    ${isSidebarOpen ? 'w-70' : 'w-70'}
   `}
         >
           <section className='w-full h-18 flex items-center  border-b-1 border-[var(--border)] pl-4 shrink-0'>
@@ -177,7 +177,7 @@ const Dashboard = () => {
               </button>
             </div>
           </section>
-          <section className='pt-2 pb-0.5 px-4'>
+          <section className='pt-2 pb-1 px-4'>
             <Link to='/user/login'>
               <div className='w-full h-11 flex items-center gap-2 text-[#DC2626] border-1 border-[#ffa9a9] hover:bg-[#ffa9a9] bg-[var(--white)] justify-center rounded-lg cursor-pointer transition-all duration-300 rounded-xl'>
                 <i className='fa-solid fa-right-from-bracket'></i>{' '}
@@ -186,6 +186,47 @@ const Dashboard = () => {
             </Link>
           </section>
         </aside>
+        {/* Blur Background */}
+        {isSidebarOpen && (
+          <div
+            onClick={() => setIsSidebarOpen(false)}
+            className='fixed inset-0 z-40 bg-white/10 backdrop-blur-sm lg:hidden transition-all duration-300'
+          ></div>
+        )}
+        {/* Main Content */}
+        <main>
+          <nav className='w-full h-18 flex items-center justify-between px-2 md:px-4 border-b-1 border-[var(--border)]'>
+            <div
+              className='w-11 h-10 bg-[var(--white)] hover:bg-[var(--cl-purple)]  rounded-xl flex items-center justify-center cursor-pointer transition-all duration-300 lg:hidden text-[var(--cl-purple)] hover:text-[var(--cl-white)]'
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              <i className='fa-solid fa-bars '></i>
+            </div>
+            <div>
+              <img
+                src='/images/logo.png'
+                alt='logo'
+                className=' h-6 lg:hidden'
+              />
+            </div>
+            <div className='flex items-center gap-2 md:gap-4'>
+              <div className='relative'>
+                <i className='fa-solid fa-bell text-sm lg:text-base text-[var(--gray)] cursor-pointer'></i>
+                <span className='absolute bottom-4.5 left-3 w-2 h-2 bg-[#DC2626] rounded-full'></span>
+              </div>
+              <div className='flex items-center gap-1.5 md:gap-3 p-1.5 rounded-3xl hover:bg-[var(--white)] cursor-pointer transition-all duration-300 border-1 border-[var(--cl-white)]  hover:border-[var(--cl-purple)] hover:-translate-y-0.5 cursor-pointer'>
+                <img
+                  src='/images/profile11.png'
+                  alt='profile'
+                  className='h-10.5 border-2 border-[var(--cl-purple)] rounded-full'
+                />
+                <span>
+                  <i className='fa-solid fa-angle-down text-[var(--gray)]'></i>
+                </span>
+              </div>
+            </div>
+          </nav>
+        </main>
       </section>
     </>
   );
