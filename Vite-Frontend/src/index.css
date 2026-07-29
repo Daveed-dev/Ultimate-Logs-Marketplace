@@ -10,6 +10,7 @@
   --dark: #0f172a;
   --gray: #64748b;
   --light-gray: #f8fafc;
+  --text-muted: #64748b;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
   --shadow-3d:
@@ -131,4 +132,19 @@ button {
 
 .animatefloatdown {
   animation: floatDown 6s ease-in-out infinite;
+}
+
+/* 
+Hide Scrollbar
+*/
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* 
+Whatsaap contact
+*/
+.wp {
+  background: linear-gradient(135deg, #e6fbf0 0%, #ccf4e0 100%);
+  border: 1px solid #a3e6c3;
 }

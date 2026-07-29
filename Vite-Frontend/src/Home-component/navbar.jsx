@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isFixed, setIsFixed] = useState(false);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsFixed(window.scrollY >= 50);

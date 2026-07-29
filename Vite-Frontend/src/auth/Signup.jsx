@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Signup = () => {
   useEffect(() => {
     document.title = 'Ultimate Tools Marketplace - Register';
-  });
+  }, []);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);

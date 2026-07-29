@@ -4,6 +4,7 @@ import Home from './Modules/Home';
 import Auth from './Modules/Auth';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
+import Dashboard from './auth/Dashboard';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/user/*' element={<Auth />}>
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Signup />} />
+          <Route path='dashboard' element={<Dashboard />} />
         </Route>
       </Routes>
     </>

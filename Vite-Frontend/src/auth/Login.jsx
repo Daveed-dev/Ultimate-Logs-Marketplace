@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   useEffect(() => {
     document.title = 'Ultimate Tools Marketplace - Login';
-  });
+  }, []);
 
   const [showPassword, setShowPassword] = useState(false);
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
   return (
     <>
       <section className='w-full h-screen flex items-center justify-center bg-[var(--bg-body)] px-4'>
@@ -78,14 +78,14 @@ const Login = () => {
                 </div>
               </div>
               <div className='py-2'>
-                <button
-                  type='submit'
+                <Link
+                  to='/user/dashboard'
                   className='relative overflow-hidden text-white font-medium p-3 rounded-xl w-full bg-gradient-to-r from-[var(--light-pur)] to-[var(--accent)] flex justify-center items-center hover:-translate-y-1 hover:shadow-[0px_8px_20px_rgba(217,70,239,0.25)] transition-all duration-300 text-[1rem] group'
                 >
                   {/* Shimmer sweep */}
                   <span className='absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 pointer-events-none' />
                   Sign In <i className='fa-solid fa-arrow-right ml-2'></i>
-                </button>
+                </Link>
               </div>
             </form>
             <div className='flex justify-center py-2 gap-1'>
