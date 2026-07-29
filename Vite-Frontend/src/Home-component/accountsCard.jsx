@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ScrollintoView from '../Functions';
+import { Link } from 'react-router-dom';
 
 const AccountsCard = ({ bg, cl, linear, icon, title, description, status }) => {
   const [hovered, setHovered] = useState(false);
@@ -36,12 +37,15 @@ const AccountsCard = ({ bg, cl, linear, icon, title, description, status }) => {
           <p className='text-[var(--dark-pur)] bg-[var(--white)] font-medium py-1.5 px-2 rounded-full text-[0.85rem]'>
             {status}
           </p>
-          <p className='text-[var(--dark-pur)] font-medium text-[0.9rem]'>
+          <Link
+            to='/user/login'
+            className='text-[var(--dark-pur)] font-medium text-[0.9rem] cursor-pointer'
+          >
             Buy Now
             <i
               className={`fa-solid fa-chevron-right text-[0.9rem] transition-all duration-200 ${hovered ? 'ml-1.5' : ''}`}
             ></i>
-          </p>
+          </Link>
         </div>
       </div>
     </>

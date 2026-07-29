@@ -1,5 +1,6 @@
 import React from 'react';
 import { footerIcons } from '../utils/Data';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -19,7 +20,9 @@ const Footer = () => {
                     className='w-10 h-10 flex items-center justify-center rounded-xl bg-[var(--light-gray)] transition-all duration-300 hover:bg-[var(--white)] border border-[var(--border)] hover:border-[var(--light-pur)] cursor-pointer'
                     key={index}
                   >
-                    <i className={`${item.icon} text-[var(--gray)]`}></i>
+                    <a href='#'>
+                      <i className={`${item.icon} text-[var(--gray)]`}></i>
+                    </a>
                   </span>
                 );
               })}
@@ -28,71 +31,75 @@ const Footer = () => {
           <div className='md:flex md:flex-wrap justify-between gap-8 mt-2 md:mt-4 lg:mt-0 lg:gap-16'>
             <div className='flex flex-col items-start'>
               <h1 className='font-bold text-xl py-2 md:py-0'>Buy Logins</h1>
-              <a
-                href='#'
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5  block transition-colors duration-300'
               >
                 Buy Digital Accounts
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5  block transition-colors duration-300'
               >
                 Buy Email Accounts
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 Buy VPN Logins
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 Buy Entertainment Logs
-              </a>
+              </Link>
             </div>
             <div className='flex flex-col items-start'>
               <h1 className='font-bold text-xl py-2 md:py-0'>Operations</h1>
 
-              <a
-                href='#'
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 transition-colors duration-300'
               >
                 Purchase History
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 API Documentation
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 Replacement Policy
-              </a>
-              <a
-                href='#'
+              </Link>
+              <Link
+                to='/user/login'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 Terms of Use
-              </a>
+              </Link>
             </div>
             <div className='flex flex-col items-start'>
               <h1 className='font-bold text-xl py-2 md:py-0'>Contact us</h1>
 
               <a
-                href='#'
+                href='mailto:ultimatelogsmarketplace@gmail.com'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 <i className='fas fa-envelope mr-1.5'></i>
                 ultimatelogsmarketplace@gmail.com
               </a>
               <a
-                href='#'
+                href='https://t.me/ultimatecustomercare'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='text-[var(--gray)] hover:text-[var(--dark-pur)] py-0.5 block transition-colors duration-300'
               >
                 <i className='fa-brands fa-telegram mr-1.5'></i>Live Suport on

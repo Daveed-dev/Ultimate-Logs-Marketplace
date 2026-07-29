@@ -3,6 +3,7 @@ import ScrollintoView from '../Functions';
 import { marketCardData, setupCardData } from '../utils/Data';
 import MarketCard from './marketCard';
 import SetupCard from './setupCard';
+import { Link } from 'react-router-dom';
 
 const Market = () => {
   const [ref, setAnimation] = ScrollintoView();
@@ -64,12 +65,18 @@ const Market = () => {
                 credentials from Ultimate Logs Marketplace and scale instantly.
               </p>
               <div className='flex flex-wrap justify-center gap-4 py-6'>
-                <button className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] md:text-[1rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '>
+                <Link
+                  to='/user/register'
+                  className='bg-white text-black p-4 rounded-2xl hover:text-[var(--dark-pur)] transition-colors duration-300 font-medium text-[0.9rem] md:text-[1rem] hover:-translate-y-0.5 hover:shadow-[0px_8px_20px_rgba(141,55,226,0.2)] '
+                >
                   Register Free Account
-                </button>
-                <button className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem] md:text-[1rem]'>
+                </Link>
+                <Link
+                  to='/user/login'
+                  className='bg-[var(--dark-pur)] text-white p-4 rounded-2xl font-medium text-[0.9rem] md:text-[1rem]'
+                >
                   Browse All Logins
-                </button>
+                </Link>
               </div>
             </div>
           </div>

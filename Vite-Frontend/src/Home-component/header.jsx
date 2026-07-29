@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ScrollintoView from '../Functions';
 import { GoDotFill } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 function useTypingEffect(
   words,
@@ -82,12 +83,18 @@ const Header = () => {
               and services, empowering your digital journey.
             </p>
             <div className='pt-4 flex gap-6 md:gap-5 justify-center lg:justify-start'>
-              <button className='text-white py-4 px-7 bg-gradient-to-br from-[var(--light-pur)] to-[var(--dark-pur)] rounded-xl hover:-translate-y-1 shadow-[0px_8px_20px_rgba(141,55,226,0.2)] hover:shadow-[0px_8px_20px_rgba(141,55,226,0.4)]'>
+              <Link
+                to='/user/register'
+                className='text-white py-4 px-7 bg-gradient-to-br from-[var(--light-pur)] to-[var(--dark-pur)] rounded-xl hover:-translate-y-1 shadow-[0px_8px_20px_rgba(141,55,226,0.2)] hover:shadow-[0px_8px_20px_rgba(141,55,226,0.4)]'
+              >
                 Browse Accounts <i className='fa-solid fa-arrow-right '></i>
-              </button>
-              <button className='bg-white py-4 px-6 text-[var(--dark)] border-2 border-[var(--gray)]/30 rounded-xl hover:-translate-y-0.5 hover:border-[var(--dark-pur)] text-[var(--dark)] hover:text-[var(--dark-pur)] font-medium'>
+              </Link>
+              <Link
+                to='/user/login'
+                className='bg-white py-4 px-6 text-[var(--dark)] border-2 border-[var(--gray)]/30 rounded-xl hover:-translate-y-0.5 hover:border-[var(--dark-pur)] text-[var(--dark)] hover:text-[var(--dark-pur)] font-medium'
+              >
                 Log In
-              </button>
+              </Link>
             </div>
           </div>
           <div className='mt-8 lg:mt-0 pt-8 lg:pt-32 shadow-[var(--shadow-md)] w-80 md:w-100 xl:w-140 mx-auto rounded-2xl lg:shadow-none'>
