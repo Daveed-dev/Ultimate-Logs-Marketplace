@@ -8,7 +8,15 @@ const Signup = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!agreed) return console.log('From not Submitted');
+
+    console.log('Form Submitted');
+  };
 
   return (
     <>
@@ -31,7 +39,12 @@ const Signup = () => {
               Join Ultimate Logs Marketplace and get started today.
             </p>
             {/* FORM */}
-            <form action='' method='post' className=''>
+            <form
+              action=''
+              method='post'
+              onSubmit={(e) => handleSubmit(e)}
+              className=''
+            >
               {/* INPUT    */}
               <div className='md:flex gap-3'>
                 <div className='flex flex-col pt-4'>
@@ -165,6 +178,7 @@ const Signup = () => {
 
                   <input
                     placeholder='Enter referal code'
+                    type='text'
                     className='w-full border-2 border-[#eef0f6] rounded-xl pl-12 pr-4 py-3 bg-[var(--input-bg)] outline-none  focus:ring-2
           focus:ring-[var(--dark-pur)] focus:ring-inset transition-all duration-300 placeholder:text-[var(--placeholder)] placeholder:font-medium placeholder:text-[0.95rem]'
                   />
@@ -172,13 +186,20 @@ const Signup = () => {
               </div>
               <div className='flex justify-between items-center py-3'>
                 <label className='flex items-center cursor-pointer text-[var(--gray)] hover:text-[var(--dark-pur)]'>
-                  <input type='checkbox' name='agree' className='mr-1 ' />
+                  <input
+                    type='checkbox'
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    name='agreed'
+                    className='mr-1 '
+                  />
                   <span className='text-[0.95rem] '>I agree with all</span>
                 </label>
               </div>
               <div className='py-2'>
                 <button
                   type='submit'
+                  disabled={!agreed}
                   className='relative overflow-hidden text-white font-medium p-3 rounded-xl w-full bg-gradient-to-r from-[var(--light-pur)] to-[var(--accent)] flex justify-center items-center hover:-translate-y-1 hover:shadow-[0px_8px_20px_rgba(217,70,239,0.25)] transition-all duration-300 text-[1rem] group'
                 >
                   {/* Shimmer sweep */}

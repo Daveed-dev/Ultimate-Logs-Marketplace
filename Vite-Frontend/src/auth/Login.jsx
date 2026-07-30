@@ -7,7 +7,6 @@ const Login = () => {
   }, []);
 
   const [showPassword, setShowPassword] = useState(false);
-  // const [checked, setChecked] = useState(false);
   return (
     <>
       <section className='w-full h-screen flex items-center justify-center bg-[var(--bg-body)] px-4'>
