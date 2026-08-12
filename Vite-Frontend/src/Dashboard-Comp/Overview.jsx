@@ -32,7 +32,7 @@ const Overview = () => {
         </div>
         <div>
           <h1 className='text-[var(--cl-white)] text-3xl md:text-4xl font-bold'>
-            {isBalanceVisible ? '#0.00' : '****'}
+            {isBalanceVisible ? '$0.00' : '****'}
           </h1>
         </div>
         <div className='flex items-center gap-2 md:block md:absolute md:right-12 md:top-10'>
