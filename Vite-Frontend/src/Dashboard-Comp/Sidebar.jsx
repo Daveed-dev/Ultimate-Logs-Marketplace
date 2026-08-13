@@ -6,7 +6,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
     <>
       <aside
         className={`
-    fixed top-0 left-0 h-screen z-50 flex flex-col
+    fixed top-0 left-0 h-100vh h-dvh z-50 flex flex-col
     bg-[var(--cl-white)] border-r border-[var(--border)]
     transition-all duration-300 ease-in-out
     ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
@@ -19,7 +19,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             <img src='/images/logo.png' alt='logo' className='h-9 ' />
           </div>
           <div
-            className='absolute right-10  hover:bg-[var(--white)] flex items-center justify-center w-8 h-8 rounded-full cursor-pointer transition-all duration-300 lg:hidden'
+            className='absolute right-6  hover:bg-[var(--white)] flex items-center justify-center w-8 h-8 rounded-full cursor-pointer transition-all duration-300 lg:hidden'
             onClick={() => setIsSidebarOpen(false)}
           >
             <i className='fa-solid fa-close none text-[var(--gray)] text-sm'></i>
@@ -43,7 +43,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             <p className='text-[var(--gray)] text-sm'>john.doe@example.com</p>
           </div>
         </section>
-        <section className='w-full px-4 pt-2 pb-4 overflow-y-auto flex flex-col flex-1 gap-2 scrollbar-hidden'>
+        <section className='w-full px-4 pt-2 pb-4 overflow-y-auto  flex-1 scrollbar-hidden'>
           {/* FirstSection */}
           <div>
             <h1 className='text-[var(--gray)] text-sm  font-medium'>
@@ -165,7 +165,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             </button>
           </div>
         </section>
-        <section className='pt-2 pb-1 px-4'>
+        <section className='pt-2 pb-1 px-4 shrink-0 bg-[var(--cl-white)]'>
           <Link to='/user/login'>
             <div className='w-full h-11 flex items-center gap-2 text-[#DC2626] border-1 border-[#ffa9a9] hover:bg-[#ffa9a9] bg-[var(--white)] justify-center rounded-lg cursor-pointer transition-all duration-300 rounded-xl'>
               <i className='fa-solid fa-right-from-bracket'></i>{' '}
