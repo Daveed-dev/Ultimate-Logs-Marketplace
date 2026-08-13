@@ -1,49 +1,35 @@
 import React from 'react';
 
-const Notification = ({ ActivePanel, SetActivePanel }) => {
+const Notification = ({ selectedNotification, setSelectedNotification }) => {
+  if (!selectedNotification) return null;
   return (
     <>
       <section
-        className={`fixed right-0 bottom-0 md:w-100 w-80 bg-[var(--cl-white)] h-full p-6  z-50 overflow-y-auto scrollbar-hidden transition-all duration-300 ${ActivePanel === 'notification' ? 'translate-x-0' : 'translate-x-full'} `}
+        className={`
+          fixed
+          top-0 bottom-0
+          right-auto
+          lg:left-[calc(var(--aside-width)+50px)]
+          xl:left-[calc(var(--aside-width)+100px)]
+          z-[60]
+          m-auto w-auto
+           lg:w-170 mx-2.5 sm:mx-6 md:mx-12 lg:mx-0 h-fit max-h-135 rounded-2xl
+          bg-[var(--cl-white)] overflow-hidden
+          `}
       >
-        <div className='flex items-center justify-between mb-8 text-sm '>
-          <span className='text-[var(--dark)] text-lg font-medium'>
-            Notification
-          </span>
+        <div className='w-full sticky top-0 z-10 border-b-1  border-[var(--border)] flex items-center justify-between bg-[var(--cl-white)] h-15 px-3'>
+          <h1 className='font-semibold text-lg lg:text-xl'>
+            {selectedNotification.title}
+          </h1>
           <i
             className='fa-solid fa-xmark cursor-pointer text-[var(--text-muted)]/60'
-            onClick={() => SetActivePanel(null)}
+            onClick={() => setSelectedNotification(null)}
           ></i>
         </div>
-        <div className='flex flex-col gap-2'>
-          <div className='hover:bg-[var(--light-gray)] cursor-pointer transition-all duration-300 rounded-xl p-2'>
-            <h1 className='font-medium text-lg'>How Referrals Work</h1>
-            <p className='text-[var(--text-muted)] text-[0.95rem]'>
-              Our Referral Program is now Active ✅.. Refer and Earn &nbsp;
-              Referral Rules1. Minimum Deposit RequirementYour referrals m..
-            </p>
-            <p className='text-[var(--gray)]/70 text-[0.8rem] mt-2'></p>
-          </div>
-          <div className='hover:bg-[var(--light-gray)] cursor-pointer transition-all duration-300 rounded-xl p-2'>
-            <h1 className='font-medium text-lg'>How Referrals Work</h1>
-            <p className='text-[var(--text-muted)] text-[0.95rem]'>
-              Our Referral Program is now Active ✅.. Refer and Earn &nbsp;
-              Referral Rules1. Minimum Deposit RequirementYour referrals m..
-            </p>
-            <p className='text-[var(--gray)]/70 text-[0.8rem] mt-2'>
-              3 Months ago
-            </p>
-          </div>
-          <div className='hover:bg-[var(--light-gray)] cursor-pointer transition-all duration-300 rounded-xl p-2'>
-            <h1 className='font-medium text-lg'>How Referrals Work</h1>
-            <p className='text-[var(--text-muted)] text-[0.95rem]'>
-              Our Referral Program is now Active ✅.. Refer and Earn &nbsp;
-              Referral Rules1. Minimum Deposit RequirementYour referrals m..
-            </p>
-            <p className='text-[var(--gray)]/70 text-[0.8rem] mt-2'>
-              6 Months ago
-            </p>
-          </div>
+        <div className='px-4 py-2 overflow-y-auto w-full max-h-110'>
+          <p className='text-base text-[var(--gray)] whitespace-pre-line'>
+            {selectedNotification.content}
+          </p>
         </div>
       </section>
     </>
