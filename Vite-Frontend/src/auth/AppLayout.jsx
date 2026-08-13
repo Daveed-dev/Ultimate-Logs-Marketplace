@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../Dashboard-Comp/Sidebar.jsx';
-import Main from '../Dashboard-Comp/Main.jsx';
-import Notification from '../Dashboard-Comp/Notification.jsx';
-import NotificationSidebar from '../Dashboard-Comp/NotificationSidebar.jsx';
-import Userprofile from '../Dashboard-Comp/Userprofile.jsx';
+import Sidebar from '../AppLayout-Comp/Sidebar.jsx';
+import Dashboard from '../AppLayout-Comp/Dashboard.jsx';
+import Notification from '../AppLayout-Comp/Notification.jsx';
+import NotificationSidebar from '../AppLayout-Comp/NotificationSidebar.jsx';
+import UserprofileSidebar from '../AppLayout-Comp/UserprofileSidebar.jsx';
 
-const Dashboard = () => {
+const AppLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [ActivePanel, SetActivePanel] = useState(null);
   const [selectedNotification, setSelectedNotification] = useState(null);
 
-  useEffect(() => {
-    document.title = 'Ultimate Tools Marketplace - Dashboard';
-  }, []);
   useEffect(() => {
     if (isSidebarOpen || ActivePanel || selectedNotification) {
       document.body.style.overflow = 'hidden';
@@ -40,7 +37,7 @@ const Dashboard = () => {
           ></div>
         )}
 
-        <Main
+        <Dashboard
           setIsSidebarOpen={setIsSidebarOpen}
           SetActivePanel={SetActivePanel}
         />
@@ -65,7 +62,7 @@ const Dashboard = () => {
           SetActivePanel={SetActivePanel}
           setSelectedNotification={setSelectedNotification}
         />
-        <Userprofile
+        <UserprofileSidebar
           ActivePanel={ActivePanel}
           SetActivePanel={SetActivePanel}
         />
@@ -74,4 +71,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AppLayout;
