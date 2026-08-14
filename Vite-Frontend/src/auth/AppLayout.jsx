@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../AppLayout-Comp/Sidebar.jsx';
+import Navbar from '../AppLayout-Comp/Navbar.jsx';
 import Dashboard from '../AppLayout-Comp/Dashboard.jsx';
 import Notification from '../AppLayout-Comp/Notification.jsx';
 import NotificationSidebar from '../AppLayout-Comp/NotificationSidebar.jsx';
 import UserprofileSidebar from '../AppLayout-Comp/UserprofileSidebar.jsx';
+import SmsService from '../AppLayout-Comp/SmsService.jsx';
+import { Outlet } from 'react-router-dom';
 
 const AppLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,9 +40,23 @@ const AppLayout = () => {
           ></div>
         )}
 
-        <Dashboard
+        {/* 
+        NAVBAR
+        */}
+        <Navbar
           setIsSidebarOpen={setIsSidebarOpen}
           SetActivePanel={SetActivePanel}
+        />
+
+        {/* <Dashboard
+          setIsSidebarOpen={setIsSidebarOpen}
+          SetActivePanel={SetActivePanel}
+        /> */}
+        <Outlet
+          context={{
+            setIsSidebarOpen,
+            SetActivePanel,
+          }}
         />
 
         {(ActivePanel || selectedNotification) && (

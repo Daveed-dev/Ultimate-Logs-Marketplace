@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
+  const location = useLocation();
+  const isDashboard = location.pathname === '/user/dashboard';
+
+  const navLinkClass = ({ isActive }) =>
+    `flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg  ${isActive ? 'bg-[var(--white)] text-[var(--cl-purple)]' : 'text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'} `;
+
   return (
     <>
       <aside
@@ -43,6 +49,47 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             <p className='text-[var(--gray)] text-sm'>john.doe@example.com</p>
           </div>
         </section>
+        {/*
+          Sidebar  Balance
+          */}
+        {!isDashboard && (
+          <section className='p-3'>
+            <div className='w-full h-fit bg-gradient-to-r from-[var(--cl-purple)] to-[var(--dark-pur)]/50 rounded-2xl px-4 py-3 flex flex-col gap-1.5 relative'>
+              <div className='absolute inset-0 pointer-events-none z-1'>
+                <span className='absolute left-12 -top-10 h-[120%] w-[1.5px] bg-white/10 rotate-[14deg]'></span>
+
+                <span className='absolute left-45 -top-10 h-[100%] w-[1px] bg-white/10 rotate-[-20deg]'></span>
+
+                <span className='absolute right-26 -top-10 h-[105%] w-[1.5px] bg-white/10 rotate-[22deg]'></span>
+
+                <span className='absolute right-10 -top-10 h-[90%] w-[1px] bg-white/10 rotate-[-9deg]'></span>
+              </div>
+
+              <div className=' '>
+                <p className='text-[var(--cl-white)]/80 text-sm md:text-[0.9rem]'>
+                  ACCOUNT BALANCE
+                </p>
+              </div>
+              <div>
+                <h1 className='text-[var(--cl-white)] text-xl md:text-2xl font-bold'>
+                  $0.00
+                </h1>
+              </div>
+              <div className='w-25'>
+                <NavLink
+                  href='#'
+                  className='flex items-center gap-1 bg-white/10 backdrop-blur-[10px] text-[var(--cl-white)] hover:-translate-y-0.5 transition-all text-sm font-bold duration-300 py-1 px-4 rounded-3xl border-1 border-[var(--cl-white)]/20'
+                >
+                  <i className='fa-solid fa-add '></i>
+                  <p>History</p>
+                </NavLink>
+              </div>
+            </div>
+          </section>
+        )}
+        {/*
+          end of Sidebar Balance
+          */}
         <section className='w-full px-4 pt-2 pb-4 overflow-y-auto  flex-1 scrollbar-hidden'>
           {/* FirstSection */}
           <div>
@@ -50,24 +97,18 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               Marketplace
             </h1>
             <nav className='pt-1  flex flex-col gap-0.5 pl-1.5'>
-              <a
-                href='#'
-                className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg bg-[var(--white)] text-[var(--cl-purple)]'
-              >
+              <NavLink to='/user/dashboard' className={navLinkClass}>
                 <i className='fas fa-home'></i>Dashboard
-              </a>
+              </NavLink>
               <a
                 href='#'
                 className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
               >
                 <i className='fa-solid fa-users'></i>Buy Social Accounts
               </a>
-              <a
-                href='#'
-                className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
-              >
+              <NavLink to='/user/sms-service' className={navLinkClass}>
                 <i className='fa-solid fa-phone'></i>Buy Number
-              </a>
+              </NavLink>
               <a
                 href='#'
                 className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
@@ -166,12 +207,12 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           </div>
         </section>
         <section className='pt-2 pb-1 px-4 shrink-0 bg-[var(--cl-white)]'>
-          <Link to='/user/login'>
+          <NavLink to='/user/login'>
             <div className='w-full h-11 flex items-center gap-2 text-[#DC2626] border-1 border-[#ffa9a9] hover:bg-[#ffa9a9] bg-[var(--white)] justify-center rounded-lg cursor-pointer transition-all duration-300 rounded-xl'>
               <i className='fa-solid fa-right-from-bracket'></i>{' '}
               <span className='text-lg font-medium'>Logout</span>
             </div>
-          </Link>
+          </NavLink>
         </section>
       </aside>
     </>
