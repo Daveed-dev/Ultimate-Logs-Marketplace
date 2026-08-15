@@ -5,9 +5,10 @@ import Auth from './Modules/Auth';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
 import AppLayout from './auth/AppLayout';
-import Dashboard from './AppLayout-Comp/Dashboard';
-import SmsService from './AppLayout-Comp/SmsService';
-import EmailService from './AppLayout-Comp/EmailService';
+import Dashboard from './AppLayout-Comp/Pages/Dashboard';
+import SmsService from './AppLayout-Comp/Pages/SmsService';
+import EmailService from './AppLayout-Comp/Pages/EmailService';
+import BillPayment from './AppLayout-Comp/Pages/BillPayment';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='sms-service' element={<SmsService />} />
           <Route path='email-service' element={<EmailService />} />
+          <Route path='bills' element={<BillPayment />} />
         </Route>
       </Routes>
     </>

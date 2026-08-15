@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Main from '../Dashboard-Comp/main.jsx';
+import Main from '../../Dashboard-Comp/main.jsx';
 
 const Dashboard = () => {
   useEffect(() => {

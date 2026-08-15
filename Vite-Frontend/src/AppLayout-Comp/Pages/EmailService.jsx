@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { buyEmailCardsData } from '../utils/AppLayoutDatas';
+import { buyEmailCardsData } from '../../utils/AppLayoutDatas';
 const EmailService = () => {
   useEffect(() => {
     document.title = 'Ultimate Tools Marketplace - Email Service';

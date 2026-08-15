@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { buyNumberCardsData } from '../utils/AppLayoutDatas';
+import { buyNumberCardsData } from '../../utils/AppLayoutDatas';
 
 const SmsService = () => {
   useEffect(() => {

@@ -65,3 +65,36 @@ export const buyEmailCardsData = [
     text: 'Choose for OTP services',
   },
 ];
+
+export const billPaymentCardsData = [
+  {
+    id: 1,
+    icon: 'fa-mobile-screen',
+    title: 'Airtime',
+    text: 'Top up airtime instantly across MTN, Glo, Airtel, 9Mobile',
+  },
+  {
+    id: 2,
+    icon: 'fa-wifi',
+    title: 'Data',
+    text: 'Buy data bundles for any network',
+  },
+  {
+    id: 3,
+    icon: 'fa-tv',
+    title: 'Cable TV',
+    text: 'Renew DStv, GOtv, Startimes subscriptions',
+  },
+  {
+    id: 4,
+    icon: 'fa-bolt-lightning',
+    title: 'Electricity',
+    text: 'Pay your prepaid or postpaid electricity bill',
+  },
+  {
+    id: 5,
+    icon: 'fa-file-invoice-dollar',
+    title: 'International Airtime',
+    text: 'Pay your international airtime bill',
+  },
+];

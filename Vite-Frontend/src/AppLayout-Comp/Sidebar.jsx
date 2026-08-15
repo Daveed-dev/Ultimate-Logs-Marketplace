@@ -130,12 +130,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               >
                 <i className='fa-solid fa-clock-rotate-left'></i>Manage Rentals
               </a>
-              <a
-                href='#'
-                className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
+              <NavLink
+                to='/user/bills'
+                className={navLinkClass}
+                onClick={() => setIsSidebarOpen(false)}
               >
                 <i className='fa-solid fa-file-invoice-dollar'></i>Bill Payment
-              </a>
+              </NavLink>
             </nav>
           </div>
           {/* SecondSection */}
