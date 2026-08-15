@@ -97,7 +97,11 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               Marketplace
             </h1>
             <nav className='pt-1  flex flex-col gap-0.5 pl-1.5'>
-              <NavLink to='/user/dashboard' className={navLinkClass}>
+              <NavLink
+                to='/user/dashboard'
+                className={navLinkClass}
+                onClick={() => setIsSidebarOpen(false)}
+              >
                 <i className='fas fa-home'></i>Dashboard
               </NavLink>
               <a
@@ -106,15 +110,20 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               >
                 <i className='fa-solid fa-users'></i>Buy Social Accounts
               </a>
-              <NavLink to='/user/sms-service' className={navLinkClass}>
+              <NavLink
+                to='/user/sms-service'
+                className={navLinkClass}
+                onClick={() => setIsSidebarOpen(false)}
+              >
                 <i className='fa-solid fa-phone'></i>Buy Number
               </NavLink>
-              <a
-                href='#'
-                className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
+              <NavLink
+                to='/user/email-service'
+                className={navLinkClass}
+                onClick={() => setIsSidebarOpen(false)}
               >
                 <i className='fa-solid fa-envelope'></i>Buy Emails
-              </a>
+              </NavLink>
               <a
                 href='#'
                 className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'

@@ -7,6 +7,7 @@ import Signup from './auth/Signup';
 import AppLayout from './auth/AppLayout';
 import Dashboard from './AppLayout-Comp/Dashboard';
 import SmsService from './AppLayout-Comp/SmsService';
+import EmailService from './AppLayout-Comp/EmailService';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/user' element={<AppLayout />}>
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='sms-service' element={<SmsService />} />
+          <Route path='email-service' element={<EmailService />} />
         </Route>
       </Routes>
     </>

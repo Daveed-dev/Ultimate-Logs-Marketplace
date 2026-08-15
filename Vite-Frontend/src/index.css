@@ -18,6 +18,11 @@
     6px 6px 0px rgba(0, 0, 0, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.15);
   --border: #e2e8f0;
   --accent: #d946ef;
+  --brown-glazzy: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(243, 230, 255, 0.95) 100%
+  );
   --gradient-text: linear-gradient(to right, #8d37e2, #d946ef);
   --icons: #cbd5e1;
   --input-bg: #fafafe;

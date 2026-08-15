@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import Main from '../Dashboard-Comp/main.jsx';
-import { useOutletContext } from 'react-router-dom';
 
 const Dashboard = () => {
   useEffect(() => {
     document.title = 'Ultimate Tools Marketplace - Dashboard';
   }, []);
-  const { setIsSidebarOpen, SetActivePanel } = useOutletContext();
 
   return (
     <>
