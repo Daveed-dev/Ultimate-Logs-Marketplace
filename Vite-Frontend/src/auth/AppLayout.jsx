@@ -7,6 +7,7 @@ import NotificationSidebar from '../AppLayout-Comp/NotificationSidebar.jsx';
 import UserprofileSidebar from '../AppLayout-Comp/UserprofileSidebar.jsx';
 import SmsService from '../AppLayout-Comp/Pages/SmsService.jsx';
 import { Outlet } from 'react-router-dom';
+import ChatBot from '../AppLayout-Comp/ChatBot.jsx';
 
 const AppLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -83,6 +84,8 @@ const AppLayout = () => {
           ActivePanel={ActivePanel}
           SetActivePanel={SetActivePanel}
         />
+
+        <ChatBot />
       </section>
     </>
   );
