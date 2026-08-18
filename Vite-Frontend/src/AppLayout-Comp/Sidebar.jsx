@@ -72,7 +72,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               </div>
               <div>
                 <h1 className='text-[var(--cl-white)] text-xl md:text-2xl font-bold'>
-                  $0.00
+                  $540.00
                 </h1>
               </div>
               <div className='w-25'>
@@ -167,12 +167,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           <div>
             <h1 className='text-[var(--gray)] text-sm font-medium'>Account</h1>
             <nav className='pt-1  flex flex-col gap-0.5 pl-1.5'>
-              <a
-                href='#'
-                className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'
+              <NavLink
+                to='/user/profile-setting'
+                className={navLinkClass}
+                onClick={() => setIsSidebarOpen(false)}
               >
                 <i className='fa-solid fa-user-gear'></i>Profile Settings
-              </a>
+              </NavLink>
               <a
                 href='#'
                 className='flex items-center gap-2.5 text-base  py-2 px-2 font-semibold rounded-lg text-[var(--text-muted)] hover:bg-[var(--white)] hover:text-[var(--cl-purple)]'

@@ -9,6 +9,9 @@ import Dashboard from './AppLayout-Comp/Pages/Dashboard';
 import SmsService from './AppLayout-Comp/Pages/SmsService';
 import EmailService from './AppLayout-Comp/Pages/EmailService';
 import BillPayment from './AppLayout-Comp/Pages/BillPayment';
+import AccountSettingLayout from './AppLayout-Comp/Pages/AccountSettingLaqyout';
+import ProfileSetting from './AccountSetting-comp/ProfileSetting';
+import PasswordSetting from './AccountSetting-comp/PasswordSetting';
 
 const App = () => {
   return (
@@ -26,6 +29,10 @@ const App = () => {
           <Route path='sms-service' element={<SmsService />} />
           <Route path='email-service' element={<EmailService />} />
           <Route path='bills' element={<BillPayment />} />
+          <Route element={<AccountSettingLayout />}>
+            <Route path='profile-setting' element={<ProfileSetting />} />
+            <Route path='change-password' element={<PasswordSetting />} />
+          </Route>
         </Route>
       </Routes>
     </>
